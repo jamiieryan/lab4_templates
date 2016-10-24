@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  <style>
+  body{
+  
+	background:#ff471a;
+	color:#ff471a;
+	
+  }
+	#myForm{
+		margin-left:20%;
+		margin-right:20%;
+		margin-top:10%;
+		
+		border:1px solid black;
+		text-align:center;
+		background:white;
+	}
+	input{
+		border:2px solid black;
+		text-align:center;
+		
+		
+		
+	}
+  </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GET & POST Methods</title>
+
+    
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+  </head>
+  <body style="background:#ff471a;">
+  <div id="myForm">
+    <h1><u>GET & POST Methods</h1>
+	<br>
+	
+	<form action="/name/<name>"  method="get">
+
+            <div id="data">
+                <label>Please Enter Your [Full Name]</label>
+				
+				<br/>
+				
+                <input type="text" name="name" value="Get Name"><br>
+
+				<br/>
+            </div>
+
+			
+			
+            <div id="buttons">
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit"><br>
+            </div>
+        </form>
+		
+	<br/><br/><br/>
+	
+	 <form action="/firstname"  method="GET Name">
+
+            <div id="data">
+                <label>Please Enter Your [Firstname]</label>
+				
+				<br/>
+				
+                <input type="text" name="firstname" value="GET Firstname"><br>
+
+				<br/>
+            </div>
+
+			
+            <div id="buttons">
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit"><br>
+            </div>
+        </form>
+		<br/><br/><br/>
+		
+		 <form action="/lastname"  method="POST">
+
+            <div id="data">
+                <label>Please Enter Your [Lastname]</label>
+				
+				<br/>
+				
+                <input type="text" name="lastname" value="POST Lastname"><br>
+
+				<br/>
+            </div>
+
+			
+            <div id="buttons">
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit"><br>
+            </div>
+        </form>
+		<br/>
+		
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
