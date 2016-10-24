@@ -1,32 +1,42 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
+def hell():
 	return "Hello World!"
 
-@app.route("/name")
-def nameonly():
-	return "My name is Earl"
+@app.route("/hello/")
+@app.route("/hello/<name>")
+def hello(name=None):
+    return render_template("hello.html", name=name)
+
+#@app.route("/name")
+#def nameonly():
+#	return "My name is Earl"
 	
-@app.route("/name/<name>", methods = ['GET'])
-def name(name):
-	name = request.args.get("name")
-	return "Your Name is: " + name
+#@app.route("/name/<name>", methods = ['GET'])
+#def name(name):
+#	name = request.args.get("name")
+#	return "Your Name is: " + name
+#	
+#@app.route("/firstname", methods = ['GET'])
+#def gettest():
+#	var = request.args.get("firstname")
+#	return "Hello " + var
 	
-@app.route("/firstname", methods = ['GET'])
-def gettest():
-	var = request.args.get("firstname")
-	return "Hello " + var
-	
-@app.route("/lastname", methods = ['POST'])
-def posttest():
+#@app.route("/lastname", methods = ['POST'])
+#def posttest():
 #square brackets for POST var
-	var = request.form["lastname"]
-	return "Your Lastname is: " + var
+#	var = request.form["lastname"]
+#	return "Your Lastname is: " + var
 	
-#if(request.method == 'POST')
-#else#
+	
+
+
+
 
 if __name__ == "__main__":
 	app.run()
+	
+	
+
