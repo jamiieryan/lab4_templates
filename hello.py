@@ -6,9 +6,10 @@ def hell():
 	return "Hello World!"
 
 @app.route("/hello/")
-@app.route("/hello/<name>")
+@app.route("/hello/<name>", methods = ['GET'])
 def hello(name=None):
-    return render_template("hello.html", name=name)
+	name = request.args.get("name")
+	return render_template("hello.html", name=name)
 
 #@app.route("/name")
 #def nameonly():
